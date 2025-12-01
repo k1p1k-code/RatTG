@@ -23,8 +23,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         )
         .await?;
         tokio::time::sleep(tokio::time::Duration::from_secs_f32(0.5)).await;
-
-        // Пропускаем итерацию если нет задач
         if tasks.tasks.is_empty() {
             continue;
         }
