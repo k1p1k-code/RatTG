@@ -1,0 +1,17 @@
+[project]
+name = "ratport"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiogram>=3.22.0",
+    "dotenv>=0.9.9",
+    "fastapi[standard]>=0.116.1",
+    "mss>=10.1.0",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.10.1",
+    "requests>=2.32.5",
+    "tortoise-orm>=0.25.1",
+    "wmi>=1.5.1",
+]
