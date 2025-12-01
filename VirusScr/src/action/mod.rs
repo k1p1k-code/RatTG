@@ -53,7 +53,7 @@ pub async fn request_media_screenshot(
         header_map.insert(header_name, header_value);
     }
 
-    // Отправляем каждый скриншот отдельным запросом
+
     for screenshot_path in utils::media_screenshot()? {
         let file_name = std::path::Path::new(&screenshot_path)
             .file_name()
@@ -70,7 +70,7 @@ pub async fn request_media_screenshot(
         
         let response = client
             .post(&url)
-            .headers(header_map.clone()) // Клонируем заголовки для каждого запроса
+            .headers(header_map.clone()) 
             .multipart(form)
             .send()
             .await?;
